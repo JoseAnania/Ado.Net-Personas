@@ -1,0 +1,29 @@
+﻿@model PersonasWeb.Models.Persona
+
+@{
+    ViewBag.Title = "Agregar";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Agregar Persona</title>
+    <meta charset="utf-8" />
+</head>
+<body>
+    <h1>Agregar Persona</h1>
+
+    <table>
+
+        @using (Html.BeginForm())
+        {
+            <tr><td>Documento</td><td>@Html.TextBoxFor(P => P.Documento)</td></tr>
+            <tr><td>Nombre</td><td>@Html.TextBoxFor(P => P.Nombre)</td></tr>
+            <tr><td>Edad</td><td>@Html.TextBoxFor(P => P.Edad)</td></tr>
+            <tr><td><input type="submit" value="Agregar" /></td></tr>
+        }
+
+    </table>
+</body>
+</html>
